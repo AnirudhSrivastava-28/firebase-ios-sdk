@@ -15,10 +15,11 @@
 import Foundation
 
 #if SWIFT_PACKAGE
-  internal import GoogleUtilities_NSData
+@_implementationOnly import GoogleUtilities_NSData
 #else
-  internal import GoogleUtilities
-#endif // SWIFT_PACKAGE
+@_implementationOnly import GoogleUtilities
+#endif
+
 
 /// A type that provides a string representation for use in an HTTP header.
 public protocol HTTPHeaderRepresentable {
